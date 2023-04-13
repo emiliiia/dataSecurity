@@ -59,11 +59,11 @@ public class DiffieHellman {
 
     //для кожного числа i від 2 до phi перевіряється чи є i дільником phi та чи a = i^(phi/i)mod(p)=1
     //якщо таке число a знайдене, то i є первісним коренем за модулем p
-        for (BigInteger i = BigInteger.TWO; i.compareTo(phi) < 0; i = i.add(BigInteger.ONE)) {
+        /*for (BigInteger i = BigInteger.TWO; i.compareTo(phi) < 0; i = i.add(BigInteger.ONE)) {
             if (phi.mod(i).equals(BigInteger.ZERO) && i.modPow(phi.divide(i), p).equals(BigInteger.ONE)) {
                 return i;
             }
-        }
+        }*/
         return null;
     }
 
